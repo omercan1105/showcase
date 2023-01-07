@@ -11726,3 +11726,50 @@ fieldset:disabled .btn {
 .project-element {
     border: none;
 }
+
+.display-image-container {
+    width: 100%; 
+    z-index: 0;
+
+    position: relative;
+    text-align: center;
+}
+
+.display-image {
+    width: 100%;
+    position: relative;
+    top: 50%;
+}
+
+.display-image-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-weight: bold;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.disabled-button {
+    pointer-events: none;
+    cursor: not-allowed;
+    /* opacity: 0.65;
+    filter: alpha(opacity=65); */
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.project-anchor {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
