@@ -11718,3 +11718,11 @@ fieldset:disabled .btn {
         display: none !important
     }
 }
+
+.container-main {
+    background-color: rgba(230, 178, 84, 0.4);
+}
+
+.project-element {
+    border: none;
+}
