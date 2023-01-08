@@ -11728,17 +11728,15 @@ fieldset:disabled .btn {
 }
 
 .display-image-container {
-    width: 100%; 
-    z-index: 0;
-
+    width: 100%;
+    aspect-ratio: 16/9;
     position: relative;
-    text-align: center;
+    background-color: black;
 }
 
 .display-image {
-    width: 100%;
-    position: relative;
-    top: 50%;
+    display: none; /* On initial load otherwise it will have the incorrect size, its turned on via jQuery once size is set */
+    object-fit: cover;
 }
 
 .display-image-center-text {
