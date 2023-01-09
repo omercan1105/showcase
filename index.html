@@ -88,9 +88,9 @@
                         Click on a project to learn more
                     </p>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary filter-btn" id="web">Web Dev</button>
+                        <button type="button" class="btn btn-secondary filter-btn" id="web">Web</button>
                         <button type="button" class="btn btn-secondary filter-btn btn-warning" id="all">All Projects</button>
-                        <button type="button" class="btn btn-secondary filter-btn" id="game">Game Dev</button>
+                        <button type="button" class="btn btn-secondary filter-btn" id="game">Unity</button>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                                     </p>
 
                                     <div class="bottom-info d-flex justify-content-between align-items-center">
-                                        <div class="btn btn-sm btn-danger disabled-button" tabindex="-1"> PC Game </div>
+                                        <div class="btn btn-sm btn-danger disabled-button" tabindex="-1"> Unity </div>
          
                                         <small class="text-muted">Jan 2021 - Dec 2021</small>
                                     </div>
@@ -152,8 +152,8 @@
 
                                     <div class="bottom-info d-flex justify-content-between align-items-center">
                                         <div>
-                                            <div class="btn btn-sm btn-info disabled-button" tabindex="-1"> Web Game </div>
-                                            <div class="btn btn-sm btn-warning disabled-button" tabindex="-1"> Multiplayer </div>
+                                            <div class="btn btn-sm btn-info disabled-button" tabindex="-1"> Web </div>
+                                            <div class="btn btn-sm btn-success disabled-button" tabindex="-1"> Multiplayer </div>
                                         </div>
 
                                         <small class="text-muted">Jul 2022 - Aug 2022</small>
@@ -184,7 +184,7 @@
                                     </p>
                                     
                                     <div class="bottom-info d-flex justify-content-between align-items-center">
-                                        <div class="btn btn-sm btn-info disabled-button" tabindex="-1"> Website </div>
+                                        <div class="btn btn-sm btn-info disabled-button" tabindex="-1"> Web </div>
 
                                         <small class="text-muted">May 2022 - Jul 2022</small>
                                     </div>
@@ -213,8 +213,7 @@
                                     
                                     <div class="bottom-info d-flex justify-content-between align-items-center">
                                         <div>
-                                            <div class="btn btn-sm btn-info disabled-button" tabindex="-1"> Web Game </div>
-                                            <div class="btn btn-sm btn-danger disabled-button" tabindex="-1"> Mobile Game </div>
+                                            <div class="btn btn-sm btn-danger disabled-button" tabindex="-1"> Unity </div>
                                         </div>
 
                                         <small class="text-muted">Feb 2022 - Apr 2022</small>
@@ -245,8 +244,8 @@
                                     
                                     <div class="bottom-info d-flex justify-content-between align-items-center">
                                         <div>
-                                            <div class="btn btn-sm btn-danger disabled-button" tabindex="-1"> PC Game </div>
-                                            <div class="btn btn-sm btn-warning disabled-button" tabindex="-1"> Multiplayer </div>
+                                            <div class="btn btn-sm btn-danger disabled-button" tabindex="-1"> Unity </div>
+                                            <div class="btn btn-sm btn-success disabled-button" tabindex="-1"> Multiplayer </div>
                                         </div>
 
                                         <small class="text-muted">Jan 2022 - Mar 2022</small>
@@ -282,12 +281,17 @@
         $(".filter-btn").click(function() {
             let id = this.id;
 
-            $(".filter-btn").removeClass("btn-warning") // Remove from all
-            $(this).addClass("btn-warning") // Add warning
-
+            $(".filter-btn").removeClass("btn-warning btn-info btn-danger") // Remove from all
+            
             if (id === "all") {
+                $(this).addClass("btn-warning") // Add warning
+
                 $(".project-anchor").show(); // Display all
                 return;
+            } else if (id === "web") {
+                $(this).addClass("btn-info")
+            } else if (id === "game") {
+                $(this).addClass("btn-danger")
             }
 
             $('.project-anchor').each(function() {
