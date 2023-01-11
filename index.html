@@ -34,7 +34,6 @@
 </head>
 
 <body class="bg-light">
-
     <header>
         <div class="collapse bg-dark" id="navbarHeader">
             <div class="container">
@@ -303,23 +302,22 @@
         $("#all.filter-btn").focus() // Focused when page loads
 
         $(".filter-btn").click(function() {
-            let id = this.id;
-
+            let button_selection_id = this.id;
             $(".filter-btn").removeClass("btn-warning btn-info btn-danger") // Remove from all
             
-            if (id === "all") {
+            if (button_selection_id === "all") {
                 $(this).addClass("btn-warning") // Add warning
 
                 $(".project-anchor").show(); // Display all
                 return;
-            } else if (id === "web") {
+            } else if (button_selection_id === "web") {
                 $(this).addClass("btn-info")
-            } else if (id === "game") {
+            } else if (button_selection_id === "game") {
                 $(this).addClass("btn-danger")
             }
 
             $('.project-anchor').each(function() {
-                if (this.id === id) {
+                if (this.id === button_selection_id) {
                     $(this).show();
                 } else {
                     $(this).hide();
@@ -379,8 +377,6 @@
         });
         
     </script>
-
-
 </body>
 
 </html>
