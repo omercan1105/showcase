@@ -11767,9 +11767,9 @@ fieldset:disabled .btn {
     color: inherit;
 }
 
-a:hover{
-    text-decoration: none;
-    color: inherit;
+a:hover{ /* Color doesn't change, I like to keep the line even upon hover */
+    /* text-decoration: none; */
+    /* color: inherit; */
 }
 
 footer { /* add shadow below footer if need */
