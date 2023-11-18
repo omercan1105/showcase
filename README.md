@@ -1,1 +1,1 @@
-# showcase test1
+A simple showcase of my projects made with GitHub Pages
